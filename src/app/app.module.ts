@@ -23,7 +23,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-
+import { ModalComponent } from './shared/modal/modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +37,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     CardBuscaComponent,
     CardDepoimentoComponent,
     FormBuscaComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     MatFormFieldModule,
     MatInputModule,
     MatNativeDateModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent],
