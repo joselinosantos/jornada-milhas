@@ -10,7 +10,14 @@
   .mat-button-toggle-checked {
     background-color: #f7f2fa;
   }
+  .mat-button {
+    margin-bottom: 20px;
+  }
   .btn-search {
     padding: 7px;
+    margin-bottom: 16px;
+  }
+  .input-container {
+    width: 20%;
   }
 }

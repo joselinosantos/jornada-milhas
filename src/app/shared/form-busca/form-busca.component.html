@@ -15,21 +15,39 @@
       </mat-chip-list>
     </div>
     <div class="flex-container">
-      <mat-form-field appearance="outline">
+      <mat-form-field class="input-container" appearance="outline">
         <mat-label>Origem</mat-label>
         <mat-icon matPrefix>flight_takeoff</mat-icon>
         <input matInput placeholder="Origem">
         <mat-icon matSuffix>search</mat-icon>
       </mat-form-field>
-      <button mat-icon-button>
-        <mat-icon>sync_alt</mat-icon>
+
+      <button mat-button>
+        <mat-icon matSuffix>sync_alt</mat-icon>
       </button>
+
       <mat-form-field class="input-container" appearance="outline">
         <mat-label>Destino</mat-label>
         <mat-icon matPrefix>flight_land</mat-icon>
         <input matInput placeholder="Destino">
         <mat-icon matSuffix>search</mat-icon>
       </mat-form-field>
+
+      <mat-form-field class="input-container" appearance="outline">
+        <mat-label>Data de ida</mat-label>
+        <input matInput [matDatepicker]="datepickerIda">
+        <mat-datepicker-toggle matSuffix matIconSuffix [for]="datepickerIda"></mat-datepicker-toggle>
+        <mat-datepicker #datepickerIda></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field class="input-container" appearance="outline">
+        <mat-label>Data de volta</mat-label>
+        <input matInput [matDatepicker]="datepickerVolta">
+        <mat-datepicker-toggle matSuffix matIconSuffix [for]="datepickerVolta"></mat-datepicker-toggle>
+        <mat-datepicker #datepickerVolta></mat-datepicker>
+      </mat-form-field>
+
+      <button mat-flat-button class="btn-search" color="primary"><mat-icon>search</mat-icon></button>
     </div>
   </form>
 </app-card>
