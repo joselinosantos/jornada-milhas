@@ -25,6 +25,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { ModalComponent } from './shared/modal/modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { BotaoControleComponent } from './shared/botao-controle/botao-controle.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +39,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     CardDepoimentoComponent,
     FormBuscaComponent,
     ModalComponent,
+    BotaoControleComponent,
   ],
   imports: [
     BrowserModule,
