@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Depoimento } from 'src/app/core/types/depoimento';
 
 @Component({
   selector: 'app-card-depoimento',
@@ -6,12 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./card-depoimento.component.scss'],
 })
 export class CardDepoimentoComponent implements OnInit {
-  depoimento: string = `
-    Recomendo fortemente a agência de viagens Jornada.
-    Eles oferecem um serviço personalizado e de alta qualidade
-    que excedeu minhas expectativas em minha última viagem.
-  `
-  autoria: string = 'Mariana Faustino'
+  @Input() depoimento!: Depoimento;
+
   constructor() {}
 
   ngOnInit(): void {}
