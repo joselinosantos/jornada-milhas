@@ -16,7 +16,7 @@ export class DropdownUfComponent implements OnInit {
 
   unidadesFederativas: UnidadeFederativa[] = [];
   filteredOptions?: Observable<string[]>;
-  origemControl: FormControl = new FormControl();
+  formControl: FormControl = new FormControl();
   opcoes: string[] = [];
   auto: MatAutocomplete | undefined;
 
@@ -28,7 +28,7 @@ export class DropdownUfComponent implements OnInit {
 
       this.opcoes = this.unidadesFederativas.map((estado) => estado.nome);
 
-      this.filteredOptions = this.origemControl.valueChanges.pipe(
+      this.filteredOptions = this.formControl.valueChanges.pipe(
         startWith(''),
         map((value) => this.filter(value || ''))
       );
